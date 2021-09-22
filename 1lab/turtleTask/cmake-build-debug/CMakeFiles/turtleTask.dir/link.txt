@@ -1,0 +1,1 @@
+/usr/bin/cc -g -Wl,--enable-auto-import CMakeFiles/turtleTask.dir/taskC.c.o -o turtleTask.exe -Wl,--out-implib,libturtleTask.dll.a -Wl,--major-image-version,0,--minor-image-version,0 
