@@ -5,35 +5,36 @@ using namespace std;
 
 void merge(int array[], int firstIndex, int m, int lastIndex) {
     int x,y,z;
-    int sub1 = m - firstIndex + 1;
-    int sub2 = lastIndex - m;
-    int first[sub1];
-    int second[sub2];
-    for (x = 0; x < sub1; x++)
-        first[x] = array[firstIndex + x];
-    for (y = 0; y < sub2; y++)
-        second[y] = array[m + 1 + y];
+    int firstHalfIndex = m - firstIndex + 1;
+    int secondHalfIndex = lastIndex - m;
+    int firstHalf[firstHalfIndex];
+    int secondHalf[secondHalfIndex];
+    for (x = 0; x < firstHalfIndex; x++)
+        firstHalf[x] = array[firstIndex + x];
+    for (y = 0; y < secondHalfIndex; y++)
+        secondHalf[y] = array[m + 1 + y];
 
     x = 0;
     y = 0;
     z = firstIndex;
-    while (x < sub1 && y < sub2) {
-        if (first[x] <= second[y]) {
-            array[z] = first[x];
+
+    while (x < firstHalfIndex && y < secondHalfIndex) {
+        if (firstHalf[x] <= secondHalf[y]) {
+            array[z] = firstHalf[x];
             x++;
         } else {
-            array[z] = second[y];
+            array[z] = secondHalf[y];
             y++;
         }
         z++;
     }
-    while (x < sub1) {
-        array[z] = first[x];
+    while (x < firstHalfIndex) {
+        array[z] = firstHalf[x];
         x++;
         z++;
     }
-    while (y < sub2) {
-        array[z] = second[y];
+    while (y < secondHalfIndex) {
+        array[z] = secondHalf[y];
         y++;
         z++;
     }
