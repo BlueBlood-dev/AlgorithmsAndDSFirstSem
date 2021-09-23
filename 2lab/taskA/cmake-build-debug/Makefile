@@ -57,10 +57,10 @@ RM = /cygdrive/c/Users/Денис/AppData/Local/JetBrains/CLion2021.2/cygwin_cma
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /cygdrive/d/GitClone/1-sem-itmo-algo-tasks/2lab
+CMAKE_SOURCE_DIR = /cygdrive/d/GitClone/1-sem-itmo-algo-tasks/2lab/taskA
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /cygdrive/d/GitClone/1-sem-itmo-algo-tasks/2lab/cmake-build-debug
+CMAKE_BINARY_DIR = /cygdrive/d/GitClone/1-sem-itmo-algo-tasks/2lab/taskA/cmake-build-debug
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -87,9 +87,9 @@ edit_cache/fast: edit_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /cygdrive/d/GitClone/1-sem-itmo-algo-tasks/2lab/cmake-build-debug/CMakeFiles /cygdrive/d/GitClone/1-sem-itmo-algo-tasks/2lab/cmake-build-debug//CMakeFiles/progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start /cygdrive/d/GitClone/1-sem-itmo-algo-tasks/2lab/taskA/cmake-build-debug/CMakeFiles /cygdrive/d/GitClone/1-sem-itmo-algo-tasks/2lab/taskA/cmake-build-debug//CMakeFiles/progress.marks
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start /cygdrive/d/GitClone/1-sem-itmo-algo-tasks/2lab/cmake-build-debug/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /cygdrive/d/GitClone/1-sem-itmo-algo-tasks/2lab/taskA/cmake-build-debug/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
@@ -129,29 +129,29 @@ depend:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/2lab.dir/build.make CMakeFiles/2lab.dir/build
 .PHONY : 2lab/fast
 
-main.o: main.cpp.o
-.PHONY : main.o
+taskA.o: taskA.cpp.o
+.PHONY : taskA.o
 
 # target to build an object file
-main.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/2lab.dir/build.make CMakeFiles/2lab.dir/main.cpp.o
-.PHONY : main.cpp.o
+taskA.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/2lab.dir/build.make CMakeFiles/2lab.dir/taskA.cpp.o
+.PHONY : taskA.cpp.o
 
-main.i: main.cpp.i
-.PHONY : main.i
+taskA.i: taskA.cpp.i
+.PHONY : taskA.i
 
 # target to preprocess a source file
-main.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/2lab.dir/build.make CMakeFiles/2lab.dir/main.cpp.i
-.PHONY : main.cpp.i
+taskA.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/2lab.dir/build.make CMakeFiles/2lab.dir/taskA.cpp.i
+.PHONY : taskA.cpp.i
 
-main.s: main.cpp.s
-.PHONY : main.s
+taskA.s: taskA.cpp.s
+.PHONY : taskA.s
 
 # target to generate assembly for a file
-main.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/2lab.dir/build.make CMakeFiles/2lab.dir/main.cpp.s
-.PHONY : main.cpp.s
+taskA.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/2lab.dir/build.make CMakeFiles/2lab.dir/taskA.cpp.s
+.PHONY : taskA.cpp.s
 
 # Help Target
 help:
@@ -162,9 +162,9 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... 2lab"
-	@echo "... main.o"
-	@echo "... main.i"
-	@echo "... main.s"
+	@echo "... taskA.o"
+	@echo "... taskA.i"
+	@echo "... taskA.s"
 .PHONY : help
 
 

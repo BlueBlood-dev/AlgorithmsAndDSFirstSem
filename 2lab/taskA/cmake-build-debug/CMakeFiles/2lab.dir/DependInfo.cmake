@@ -8,7 +8,7 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
-  "/cygdrive/d/GitClone/1-sem-itmo-algo-tasks/2lab/main.cpp" "/cygdrive/d/GitClone/1-sem-itmo-algo-tasks/2lab/cmake-build-debug/CMakeFiles/2lab.dir/main.cpp.o"
+  "/cygdrive/d/GitClone/1-sem-itmo-algo-tasks/2lab/taskA/taskA.cpp" "/cygdrive/d/GitClone/1-sem-itmo-algo-tasks/2lab/taskA/cmake-build-debug/CMakeFiles/2lab.dir/taskA.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
 

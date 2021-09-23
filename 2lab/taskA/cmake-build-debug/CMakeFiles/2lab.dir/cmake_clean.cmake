@@ -1,7 +1,7 @@
 file(REMOVE_RECURSE
   "2lab.exe"
   "2lab.pdb"
-  "CMakeFiles/2lab.dir/main.cpp.o"
+  "CMakeFiles/2lab.dir/taskA.cpp.o"
   "lib2lab.dll.a"
 )
 
