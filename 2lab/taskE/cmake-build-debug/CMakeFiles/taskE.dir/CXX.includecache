@@ -6,7 +6,11 @@
 
 #IncludeRegexTransform: 
 
-/cygdrive/d/GitClone/1-sem-itmo-algo-tasks/2lab/taskC/main.cpp
+/cygdrive/d/GitClone/1-sem-itmo-algo-tasks/2lab/taskE/main.cpp
+iostream
+-
 fstream
+-
+cstdio
 -
 
