@@ -1,7 +1,7 @@
 #include <fstream>
 
 using namespace std;
-int counter = 0;
+long long counter = 0;
 void merge(int array[], int firstIndex, int m, int lastIndex) {
     int x,y,z;
     int firstHalfIndex = m - firstIndex + 1;
@@ -21,6 +21,7 @@ void merge(int array[], int firstIndex, int m, int lastIndex) {
         if (firstHalf[x] <= secondHalf[y]) {
             array[z++] = firstHalf[x++];
         } else {
+            counter += firstHalfIndex - x;
             array[z++] = secondHalf[y++];
         }
     }
