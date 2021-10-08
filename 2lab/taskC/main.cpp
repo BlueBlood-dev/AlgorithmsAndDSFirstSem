@@ -14,9 +14,7 @@ void merge(int array[], int firstIndex, int m, int lastIndex) {
     for (y = 0; y < secondHalfIndex; y++) {
         secondHalf[y] = array[m + 1 + y];
     }
-    x = 0;
-    y = 0;
-    z = firstIndex;
+    x = 0; y = 0; z = firstIndex;
     while (x < firstHalfIndex && y < secondHalfIndex) {
         if (firstHalf[x] <= secondHalf[y]) {
             array[z++] = firstHalf[x++];
