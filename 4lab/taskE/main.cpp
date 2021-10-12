@@ -36,7 +36,7 @@ int binSearchRight(int array[], int amount, int value){
      else
          return -1;
  }
- 
+
 int main() {
     ifstream in("binsearch.in");
     ofstream out("binsearch.out");
