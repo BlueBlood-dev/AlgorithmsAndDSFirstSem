@@ -1,57 +1,57 @@
 #include <iostream>
 #include <fstream>
-#include <cmath>
 
 using namespace std;
 
- void binSearchLeft(int array[], int amount, int value, int *firstFound, int *lastFound) {
-    int left = 0;
-    int right = amount - 1;
-    int counter = 0;
+int binSearchRight(int array[], int amount, int value){
+    int left = -1; int right = amount;
     int middle;
-    while (left <= right) {
-        middle = (right - left) / 2;
-        if (value == array[middle]) {
-            *firstFound = middle;
-            for( int i = middle + 1; i < amount; ++i){
-
-            }
-            *lastFound = *firstFound + counter;
-            break;
+    while (left < right - 1){
+        middle = (left + right)/2;
+        if(array[middle] <= value){
+            left = middle;
+        } else {
+            right = middle;
         }
-        counter = 0;
-        if (array[middle] > value) { right = middle - 1; } else { left = middle + 1; }
-        if (i > log(amount)) break;
     }
-
+    if(array[right-1] == value)
+        return right;
+    else
+        return  -1;
 }
 
+ int binSearchLeft(int array[], int amount, int value) {
+     int left = -1; int right = amount;
+     int middle;
+     while (left < right - 1){
+         middle = (left + right)/2;
+         if(array[middle] < value){
+             left = middle;
+         } else {
+             right = middle;
+         }
+     }
+     if(array[right] == value)
+        return right;
+     else
+         return -1;
+ }
+ 
 int main() {
     ifstream in("binsearch.in");
     ofstream out("binsearch.out");
     int amount, amountOfRequests;
     in >> amount;
     int *numbers = new int[amount];
-    for (int i = 0; i < amount; ++i)
+    for (int i = 0; i < amount; i++)
         in >> numbers[i];
     in >> amountOfRequests;
     int request;
-    int firstFound = -1;
-    int lastFound = -1;
-    for (int i = 0; i < amountOfRequests; ++i) {
+    for (int i = 0; i < amountOfRequests; i++) {
         in >> request;
-        binSearchLeft(numbers, amount, request, &firstFound, &lastFound);
-        if (firstFound != -1 && lastFound != -1) {
-            out << ++firstFound << " " << ++lastFound << "\n";
-        } else if (firstFound != -1 && lastFound == -1) {
-            out << ++firstFound << " " << lastFound << "\n";
-        } else if(firstFound == -1 && lastFound !=-1){
-            out << firstFound << " " << ++lastFound << "\n";
-        }
-        else {
-            out << firstFound << " " << lastFound << "\n";
-        }
-        firstFound =-1; lastFound=-1;
+         int tmp = binSearchLeft(numbers, amount, request);
+         tmp = tmp == -1? tmp:tmp+1;
+       out << tmp  << " " << binSearchRight(numbers,amount,request) << "\n";
     }
     return 0;
 }
