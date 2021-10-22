@@ -1,5 +1,6 @@
 #include <iostream>
 #include <fstream>
+#include <vector>
 
 using namespace std;
 
@@ -63,19 +64,24 @@ int main() {
     list stack;
     ifstream in("brackets.in");
     ofstream out("brackets.out");
-    string brackets;
+    vector<string> brackets;
+    string temp;
     while (!in.eof()) {
-        in >> brackets;
-        for (char bracket:brackets) {
-            if (bracket == '(' || bracket == '[') {
-                stack.pushToTail(bracket);
+        in >> temp;
+        brackets.push_back(temp);
+    }
+    brackets.pop_back();
+    for (string tmp: brackets) {
+        for (char symbol: tmp) {
+            if (symbol == '(' || symbol == '[') {
+                stack.pushToTail(symbol);
             } else {
-                if (bracket == ')' && !stack.isEmpty() && stack.last->value == '('){
+                if (symbol == ')' && !stack.isEmpty() && stack.last->value == '(') {
                     stack.popFromTail();
-                } else if (bracket == ']' && !stack.isEmpty() && stack.last->value == '[') {
+                } else if (symbol == ']' && !stack.isEmpty() && stack.last->value == '[') {
                     stack.popFromTail();
                 } else {
-                    stack.pushToTail(bracket);
+                    stack.pushToTail(symbol);
                     break;
                 }
             }
