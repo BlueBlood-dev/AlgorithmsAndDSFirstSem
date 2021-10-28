@@ -7,7 +7,7 @@ struct Node {
     long long value;
     Node *next;
 
-    explicit Node(long long val) : value(val), next(nullptr) {} // конструктор
+    explicit Node(long long val) : value(val), next(nullptr) {}
 };
 
 struct list {

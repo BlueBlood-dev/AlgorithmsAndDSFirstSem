@@ -76,7 +76,7 @@ int main() {
             if (symbol == '(' || symbol == '[') {
                 stack.pushToTail(symbol);
             } else {
-                if (symbol == ')' && !stack.isEmpty() && stack.last->value == '(') {
+                if (symbol == ')' && !stack.isEmpty() && stack.last->value == '('){
                     stack.popFromTail();
                 } else if (symbol == ']' && !stack.isEmpty() && stack.last->value == '[') {
                     stack.popFromTail();
