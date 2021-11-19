@@ -1,0 +1,1 @@
+/usr/bin/c++.exe -g -Wl,--enable-auto-import CMakeFiles/taskA.dir/main.cpp.o -o taskA.exe -Wl,--out-implib,libtaskA.dll.a -Wl,--major-image-version,0,--minor-image-version,0 
