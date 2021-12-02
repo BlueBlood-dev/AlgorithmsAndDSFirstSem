@@ -20,16 +20,19 @@ int main() {
             if (hashes[temp][i] == number) {
                 exists = true;
                 indexFound = i;
+                break;
             }
         }
         if (!exists && command == "insert")
             hashes[temp].push_back(number);
         if (exists && command == "delete")
             hashes[temp].erase(hashes[temp].begin() + indexFound);
-        if (command == "exists" && exists)
-            out << "true";
-        else
-            out << "false";
+        if (command == "exists") {
+            if (exists)
+                out << "true\n";
+            else
+                out << "false\n";
+        }
     }
 }
 
